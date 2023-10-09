@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Pagina de Presentación</title>
+    <meta name="Chema" content="chemaponce10@gmail.com">
+    <meta charset="utf-8">
+    <style rel="stylesheet">
+        #sidebar {
+            background-color: rgb(45, 221, 198);
+            float: left;
+            width: 15%;
+            height: 150px;
+        }
+
+        body {
+            background-color: chartreuse;
+        }
+    </style>
+    <link rel="stylesheet" href="http://localhost/MVC/app/presentacion/view/style.css">
+
+</head>
+
+<body style="background-color: #938fb68c;">
+    <center>
+        <h1>Que Onda Raza, Buenos dias</h1>
+    </center>
+    <BR>
+    <BR>
+    <center>
+        <H2 id="nombre" class="nombre_completo">Soy José María Ponce Pérez</H2>
+    </center>
+    <br>
+    <br>
+
+    <br>
+
+    <center>
+        <h2>Atualmente Estudio En:Instituto Tecnologico de Ciudad Guzmán</h2>
+    </center>
+    <br>
+    <h2 id="Datos Personales">Datos Personales</h2>
+    <ul>
+        <li onclick="noStyles()">Carrera Ingeneria Informatica</li>
+        <li onclick="noStyles()">Cursando 9°</li>
+        <li>NC: 19290646</li>
+        <li>Tengo 22 años</li>
+        <li>Me gusta ver pelicula y series</li>
+        <li>Me gusta Jugar al COD</li>
+        <li class="cambios" onclick=cambioName(0)>Steve</li>
+        <li class="cambios" onclick="cambioName(1)">Piña</li>
+        <li class="cambios" onclick="cambioName(2)">Julio</li>
+        <li><a href="#" onclick="cambioName(3); return false">regresa nombres</a></li>
+    </ul>
+
+
+    <br>
+    <center><img src="http://localhost/MVC/app/presentacion/view/IMAGEN/yo.jpg
+           " alt="yo" width="350" height="250"></center>
+    <br>
+
+    <p>Mis Redes sociales</p>
+    <br>
+    <center> <a title="instagram" href="https://instagram.com/chema_poncezl1?utm_medium=copy_link"><img
+                src="http://localhost/MVC/app/presentacion/view/IMAGEN/Intagram.png" alt="INSTA" width="80"
+                height="80" /></a> </center>
+    <br>
+    <center> <a title="tiktok" href="https://www.tiktok.com/@chema_ponce?_t=8fcDvQQhwUH&_r=1"><img
+                src="http://localhost/MVC/app/presentacion/view/IMAGEN/tiktok.png" alt="Tiktok" width="80"
+                height="80" /></a> </center>
+    <br>
+
+
+    <br>
+
+
+    <center>
+        <marquee bgcolor='#3633FF' direction="left" width="700" height="50" behavior="alternate">Pagina de Presentación
+        </marquee>
+    </center>
+
+    <script>
+        const nombres = ['Steve', 'Piña', 'Julio'];
+        nombres.forEach(
+            (Element) => {
+                alert(Element);
+            }
+        );
+
+        function cambioName(cambio) {
+
+            alert("Tratando de cambiar nombre");
+            //const nombreCompleto = document.querySelector('.nombre_completo');
+            //document.getElementById();
+            const nombreCompleto = document.getElementById("nombre");
+
+            if (cambio == 0) {
+                nombreCompleto.innerHTML = nombres[0];
+            }
+            if (cambio == 1) {
+                nombreCompleto.innerHTML = nombres[1];
+            }
+            if (cambio == 2) {
+                nombreCompleto.innerHTML = nombres[2];
+            }
+            if (cambio == 3) {
+                nombreCompleto.innerHTML = 'José María Ponce Pérez';
+            }
+
+        }
+
+        function noStyles() {
+            document.styleSheets[0].disabled = true;
+            document.styleSheets[1].disabled = true;
+            console.log(document.styleSheets)
+        }
+
+        function reStyle(n) {
+            noStyles()
+
+            document.styleSheets[n].disabled = false;
+        }
+        reStyle(0)
+    </script>
+
+    <!-- <script type="module" src="./app/presentacion/view/app.js"></script> -->
+
+</body>
+
+
+</html>

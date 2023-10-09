@@ -1,0 +1,20 @@
+p{
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+#gustos{
+    background-color: rgb(255, 0, 183);
+    padding: auto;
+    margin: 20px;
+    border-radius: 5px;
+
+    }
+#gustos h2{
+        font-size: 1.5rem;
+    }
+
+    :hover:menuitem{
+        color : green;
+        font-size: 2.rem;
+    }
